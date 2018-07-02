@@ -1,0 +1,1 @@
+//add jquery for the signup page
