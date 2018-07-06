@@ -1,2 +1,3 @@
-CREATE DATABASE puppy_db;
-USE puppy_db;
+
+CREATE DATABASE dogs_DB;
+
