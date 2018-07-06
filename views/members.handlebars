@@ -1,0 +1,110 @@
+<h2>Welcome</h2>
+
+<div>
+    <h2>Recommended Matches</h2>
+
+    <ul>
+        {{#each dogs}}
+            <li>
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card">
+                            <div class="card-image">
+                                {{!-- <img src="images/sample-1.jpg"> --}}
+                                {{this.id}}. {{this.dog_photo}}
+                            
+                                <span class="card-title">{{this.id}}. {{this.dog_name}}</span>
+                            </div>
+                    
+                            <div class="card-content">
+                                <ul>
+                                    <li>
+                                        My Owner's Name: {{this.id}}. {{this.user_name}}
+                                    </li>
+
+                                    <li>
+                                        My Favorite Park: {{this.id}}. {{this.favorite_park}}
+                                    </li>
+
+                                    <li>
+                                        I Prefer to Play At This Time: {{this.id}}. {{this.preferred_time}}
+                                    </li>
+
+                                    <li>
+                                     How Big Am I? {{this.id}}. {{this.size}}
+                                    </li>
+
+                                    <li>
+                                        My Personality Type: {{this.id}}. {{this.personality}}
+                                    </li>
+
+                                    <li>
+                                        My Activity Level: {{this.id}}. {{this.activity_level}}
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                            <div class="card-action">
+                                <button><a href="#">Contact Me</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<div>
+    <h2>Your Favorites</h2>
+
+    <ul>
+        {{#each friends}}
+            <li>
+                <div class="row">
+                    <div class="col s12 m7">
+                        <div class="card">
+                            <div class="card-image">
+                                {{!-- <img src="images/sample-1.jpg"> --}}
+                                {{this.id}}. {{this.dog_photo}}
+                            
+                                <span class="card-title">{{this.id}}. {{this.dog_name}}</span>
+                            </div>
+                    
+                            <div class="card-content">
+                                <ul>
+                                    <li>
+                                        My Owner's Name: {{this.id}}. {{this.user_name}}
+                                    </li>
+
+                                    <li>
+                                        My Favorite Park: {{this.id}}. {{this.favorite_park}}
+                                    </li>
+
+                                    <li>
+                                        I Prefer to Play At This Time: {{this.id}}. {{this.preferred_time}}
+                                    </li>
+
+                                    <li>
+                                        How Big Am I? {{this.id}}. {{this.size}}
+                                    </li>
+
+                                    <li>
+                                        My Personality Type: {{this.id}}. {{this.personality}}
+                                    </li>
+
+                                    <li>
+                                        My Activity Level: {{this.id}}. {{this.activity_level}}
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                            <div class="card-action">
+                                <button><a href="#">Contact Me</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
