@@ -18,49 +18,49 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      defaultValue: null
+      defaultValue: false 
     },
     dogName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      defaultValue: null
+      unique: true
+      // defaultValue: null
     },
     dogPhoto: {
-      type: DataTypes.TEXT,
+      type: DataTypes.CHAR,
       allowNull: false,
-      unique: true,
-      defaultValue: null
+      unique: true
+      // defaultValue: null
     },
     favorite_park: {
-      type: DataTypes.TEXT,
+      type: DataTypes.CHAR,
       allowNull: false,
-      unique: true,
-      defaultValue: null
+      unique: true
+      // defaultValue: null
     },
     preferred_time: {
       type: DataTypes.TIME,
       allowNull: false,
-      unique: true,
-      defaultValue: null
+      unique: true
+      // defaultValue: null
     },
     size: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      defaultValue: null
+      unique: true
+      // defaultValue: null
     },
     personality: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      defaultValue: null
+      unique: true
+      // defaultValue: null
     },
     activity_level: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      defaultValue: null
+      unique: true
+      // defaultValue: null
     }
   });
 
