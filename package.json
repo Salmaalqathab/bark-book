@@ -14,17 +14,22 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Salmaalqathab/project-03/issues"
+    "url": "https://github.com/Salmaalqathab/project-03/"
   },
   "homepage": "https://github.com/Salmaalqathab/project-03#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
+    "debug": "^3.1.0",
     "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^4.38.0"
+    "safe-buffer": "^5.1.2",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0"
   }
 }
