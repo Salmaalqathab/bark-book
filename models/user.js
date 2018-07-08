@@ -2,12 +2,12 @@
 
 var bcrypt = require("bcrypt-nodejs");
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, Sequelize) => {
 
   //'User' table with dog profile
   var User = sequelize.define("User", {
     email: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -15,57 +15,74 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     password: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: Sequelize.STRING,
       allowNull: false,
       unique: true
       // defaultValue: null
     },
     dogName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
+      type: Sequelize.STRING,
+      allowNull: false
+      // unique: true
       // defaultValue: null
     },
     dogPhoto: {
-      type: DataTypes.TEXT,
+      type: Sequelize.STRING,
       allowNull: false,
       unique: true
       // defaultValue: null
     },
     favorite_park: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       allowNull: false,
-      unique: true
+      // unique: true
       // defaultValue: null
     },
     preferred_time: {
-      type: DataTypes.TIME,
-      allowNull: false,
-      unique: true
+      type: Sequelize.STRING,
+      allowNull: false
+      // unique: true
       // defaultValue: null
     },
     size: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
+      type: Sequelize.STRING,
+      allowNull: false
+      // unique: true
       // defaultValue: null
     },
     personality: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
+      type: Sequelize.STRING,
+      allowNull: false
+      // unique: true
       // defaultValue: null
     },
     activity_level: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
+      type: Sequelize.STRING,
+      allowNull: false
+      // unique: true
       // defaultValue: null
     }
+  });
+
+  // Sync database
+  sequelize.sync().then(function() {
+    // Add a user
+    // User.create({
+    //   email: "doglady@hotmail.com",
+    //   password: "abc123",
+    //   name: "DogLady",
+    //   dogName: "Sam",
+    //   dogPhoto: "http://forums.roadbikereview.com/attachments/lounge/303054d1421259283-no-wonder-my-corgi-other-always-licked-me-corg-pb.jpg",
+    //   favorite_park: "Canal Park",
+    //   preferred_time: "Fridays",
+    //   size: "small",
+    //   personality: "laid-back",
+    //   activity_level: "hyperactive"
+    // });
   });
 
   User.prototype.validPassword = function (password) {

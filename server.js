@@ -1,4 +1,5 @@
 //recheck code
+// Require dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
@@ -9,6 +10,7 @@ var PORT = process.env.PORT || 8080;
 
 // Import models
 var db = require("./models");
+
 
 // Set up express app
 var app = express();
@@ -26,14 +28,6 @@ app.use(passport.session());
 // Require routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
-
-// Sync database
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-  });
-});
-
 
 // Set up handlebars
 var exphbs = require("express-handlebars");
@@ -70,4 +64,10 @@ app.get("/", function(req, res) {
 
     res.render("login", { User: data });
   });
+});
+
+// Start server so that it can begin listening to client requests.
+app.listen(PORT, function() {
+  // Log (server-side) when server has started
+  console.log("Server listening on: http://localhost:" + PORT);
 });
