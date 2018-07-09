@@ -66,7 +66,6 @@ app.get("/", function(req, res) {
   });
 });
 
-
 // Start server so that it can begin listening to client requests.
 app.listen(PORT, function() {
   // Log (server-side) when server has started
