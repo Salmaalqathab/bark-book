@@ -13,15 +13,18 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     console.log("newDog Data:");
     console.log(req.body);
-    db.User.create({
+    db.Dogs.create({
     
       name: req.body.name,
       dogName: req.body.dogName,
-      favorite_park: req.body.favorite_park,
-      preferred_time: req.body.preferred_time,
-      size: req.body.size,
+      favorite_park: req.body.dogParks,
+      preferred_time: req.body.preferredTime,
+      size: req.body.dogSize,
+      dogPhoto: req.body.dogPhoto,
       personality: req.body.personality,
-      activity_level: req.body.activity_level
+      activity_level: req.body.activityLevel,
+      UserId: 8
+      //change user id from 8 to req.body.UserId when authentication is included
     })
       .then(function() {
         res.render("members");

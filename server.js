@@ -56,15 +56,15 @@ connection.connect(function(err) {
 });
 
 // Use Handlebars to render the main page
-app.get("/", function(req, res) {
-  connection.query("SELECT * FROM User;", function(err, data) {
-    if (err) {
-      return res.status(500).end();
-    }
+// app.get("/", function(req, res) {
+//   connection.query("SELECT * FROM User;", function(err, data) {
+//     if (err) {
+//       return res.status(500).end();
+//     }
 
-    res.render("login", { User: data });
-  });
-});
+//     res.render("login", { User: data });
+//   });
+// });
 
 // Start server so that it can begin listening to client requests.
 app.listen(PORT, function() {

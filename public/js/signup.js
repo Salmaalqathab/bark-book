@@ -11,7 +11,7 @@
             name: $("#owner_name").val().trim(),
             dogName: $("#dog_name").val().trim(),
             dogSize: $("input[name=group1]:checked").val(),
-            dogPhoto: $("#comment-input").val(),
+            dogPhoto: $("#dog_pic").val(),
             personality: $("input[name=group2]:checked").val(),
             activityLevel: $("input[name=group3]:checked").val(),
             dogParks: $("input[name=group4]:checked").val(),
