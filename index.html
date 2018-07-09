@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>LOgin and Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Login-page">
+        <div class="Form">
+            <form class="Registration-form" method="POST" action="/register">
+                <input type="text" placeholder="EMAIL ID" />
+                <input type="text" placeholder="USER NAME" />
+                <input type="text" placeholder="PASSWORD" />
+                <button class="createBtn">create</button>
+                <p class="message">already Registred?
+                    <a href="#">Login</a>
+                </p>
+            </form>
+
+            <form class="Login-form" method="POST" action="/login">
+                <input type="text" placeholder="USER NAME" />
+                <input type="password" placeholder="PASSWORD" />
+                <button>Login</button>
+                <p class="message">Not Registred?
+                    <a href="#">Registre</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.Login-form').hide();
+
+            $('.message a').click(function () {
+
+                $('form').animate({
+                    height: "toggle",
+                    opacity: "toggle"
+                }, "slow");
+                $('.Login-form').show();
+                $('.Registration-form').hide();
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
