@@ -6,6 +6,7 @@
     <section class="form">
 
         <form id="sign-up">
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
@@ -116,32 +117,112 @@
             </div>
 
             <div class="row">
-                <div class="col s6">
-                    <label>Dog Parks in D.C.</label>
-                    <select class="dog_park">
-                        <option value="" disabled selected>Favorite Park</option>
-                        <option value="Upshur Dog Park">Upshur Dog Park</option>
-                        <option value="Colombia Heights Dog Park">Colombia Heights Dog Park</option>
-                        <option value="Walter Pierce Park">Walter Pierce Park</option>
-                        <option value="Gage Eckington Dog Park">Gage Eckington Dog Park</option>
-                        <option value="S Street Dog Park">S Street Dog Park</option>
-                        <option value="Shaw Dog Park">Shaw Dog Park</option>
-                        <option value="Mitchell Park">Mitchell Park</option>
-                        <option value="Francis Dog Park">Francis Dog Park</option>
-                        <option value="Rosedale Conservancy">Rosedale Conservancy</option>
-                        <option value="Newark Street Dog Park">Newark Street Dog Park</option>
-                        <option value="Langdon Dog Park">Langdon Dog Park</option>
-                        <option value="Kingsman Dog Park">Kingsman Dog Park</option>
-                        <option value="Virginia Avenue Park">Virginia Avenue Park</option>
-                        <option value="Garfield Park">Garfield Park</option>
-                        <option value="Canal Park">Canal Park</option>          
-                    </select>
-                </div>
 
-                <div class="input-field col s6">
+                <div class="input-field col s12">
+                    <input disabled value="" id="dog_park" type="text" class="validate">
+                    <label for="dog_park">Dog Parks in D.C.</label>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Upshur Dog Park" />
+                            <span>Upshur Dog Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Colombia Heights Dog Park" />
+                            <span>Colombia Heights Dog Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Walter Pierce Park" />
+                            <span>Walter Pierce Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Gage Eckington Dog Park" />
+                            <span>Gage Eckington Dog Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="S Street Dog Park" />
+                            <span>S Street Dog Park</span>
+                        </label>
+                    </p>
+                                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Shaw Dog Park" />
+                            <span>Shaw Dog Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Mitchell Park" />
+                            <span>Mitchell Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Francis Dog Park" />
+                            <span>Francis Dog Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Rosedale Conservancy" />
+                            <span>Rosedale Conservancy</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Newark Street Dog Park" />
+                            <span>Newark Street Dog Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Langdon Dog Park" />
+                            <span>Langdon Dog Park</span>
+                        </label>
+                    </p>
+                              <p>
+                        <label>
+                            <input name="group4" type="radio" value="Kingsman Dog Park" />
+                            <span>Kingsman Dog Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Virginia Avenue Park" />
+                            <span>Virginia Avenue Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Garfield Park" />
+                            <span>Garfield Park</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group4" type="radio" value="Canal Park" />
+                            <span>Canal Park</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+
                     <input placeholder="Time" id="park_time" type="text" class="validate">
                     <label for="park_time">Preferred Play Time</label>
                 </div>
+            </div>
+
+            <div>
                 <button class="btn waves-effect waves-light" id="form_submit" type="submit" name="action">Create a Profile
                     <i class="material-icons right">send</i>
                 </button>
@@ -149,3 +230,7 @@
         </form>
     </section>
 </div>
+
+<!-- Custom Script -->
+	<script src="js/signup.js" type="text/javascript"></script>
+
