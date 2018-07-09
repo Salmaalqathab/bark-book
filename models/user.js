@@ -4,7 +4,7 @@ var bcrypt = require("bcrypt-nodejs");
 
 module.exports = (sequelize, Sequelize) => {
 
-  //'User' table with dog profile
+  //'User' table with user information
   var User = sequelize.define("User", {
     email: {
       type: Sequelize.STRING,
@@ -18,71 +18,67 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
       allowNull: false
     },
+  });
+
+  //'Dogs' table with dog profile
+  var Dogs = sequelize.define("Dogs", {
     name: {
       type: Sequelize.STRING,
       allowNull: false,
       unique: true
-      // defaultValue: null
     },
     dogName: {
       type: Sequelize.STRING,
       allowNull: false
-      // unique: true
-      // defaultValue: null
     },
     dogPhoto: {
       type: Sequelize.STRING,
       allowNull: false,
       unique: true
-      // defaultValue: null
     },
     favorite_park: {
       type: Sequelize.TEXT,
       allowNull: false,
-      // unique: true
-      // defaultValue: null
     },
     preferred_time: {
       type: Sequelize.STRING,
       allowNull: false
-      // unique: true
-      // defaultValue: null
     },
     size: {
       type: Sequelize.STRING,
       allowNull: false
-      // unique: true
-      // defaultValue: null
     },
     personality: {
       type: Sequelize.STRING,
       allowNull: false
-      // unique: true
-      // defaultValue: null
     },
     activity_level: {
       type: Sequelize.STRING,
       allowNull: false
-      // unique: true
-      // defaultValue: null
     }
   });
 
+  //'Friends' table with favorites
+  var Friends = sequelize.define("Friends", {
+
+  });
+  
   // Sync database
   sequelize.sync().then(function() {
     // Add a user
     // User.create({
-    //   email: "doglady@hotmail.com",
-    //   password: "abc123",
-    //   name: "DogLady",
-    //   dogName: "Sam",
-    //   dogPhoto: "http://forums.roadbikereview.com/attachments/lounge/303054d1421259283-no-wonder-my-corgi-other-always-licked-me-corg-pb.jpg",
-    //   favorite_park: "Canal Park",
-    //   preferred_time: "Fridays",
+    //   email: "poodlemom@yahoo.com",
+    //   password: "passiton",
+    //   name: "ChristopherRobin",
+    //   dogName: "Winnie-the-Poodle",
+    //   dogPhoto: "https://3.bp.blogspot.com/-MMEM1qWk0X4/VtFLzKRFZTI/AAAAAAAAnXA/rLd5CfA3-UU/s1600/12695006_10205897375008936_3652493532428370411_o.jpg",
+    //   favorite_park: "Gage Eckington Park",
+    //   preferred_time: "Sundays",
     //   size: "small",
-    //   personality: "laid-back",
-    //   activity_level: "hyperactive"
+    //   personality: "timid",
+    //   activity_level: "moderately-energetic"
     // });
+    
   });
 
   User.prototype.validPassword = function (password) {
