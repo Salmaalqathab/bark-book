@@ -1,9 +1,13 @@
+'use strict';
+
 var bcrypt = require("bcrypt-nodejs");
-module.exports = function (sequelize, DataTypes) {
+
+module.exports = (sequelize, DataType) => {
+
   //'User' table with dog profile
   var User = sequelize.define("User", {
     email: {
-      type: DataTypes.STRING,
+      type: DataType.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -11,56 +15,8 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     password: {
-      type: DataTypes.STRING,
+      type: DataType.STRING,
       allowNull: false
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      defaultValue: false 
-    },
-    dogName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-      // defaultValue: null
-    },
-    dogPhoto: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-      // defaultValue: null
-    },
-    favorite_park: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      unique: true
-      // defaultValue: null
-    },
-    preferred_time: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-      // defaultValue: null
-    },
-    size: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-      // defaultValue: null
-    },
-    personality: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-      // defaultValue: null
-    },
-    activity_level: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true
-      // defaultValue: null
     }
   });
 
@@ -70,5 +26,11 @@ module.exports = function (sequelize, DataTypes) {
   User.hook("beforeCreate", function (user) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
+
   return User;
+
+  // User.associate = function(models) {
+  //   // associations can be defined here
+  // };
+  // return User;
 };

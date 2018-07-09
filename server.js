@@ -1,37 +1,33 @@
 //recheck code
+// Require dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport = require("./config/passport");
-// var hbs = require('express-hbs');
 
+// Set up port
 var PORT = process.env.PORT || 8080;
+
+// Import models
 var db = require("./models");
 
+
+// Set up express app
 var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Static directory
 app.use(express.static("public"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 
+// Use passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.set('view engine', 'hbs');
-// app.set('views', __dirname + '/views')
-
-require("./routes/html-routes")(app);
+// Require routes
+require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
-
-
-// db.sequelize.sync().then(function() {
-//   app.listen(PORT, function() {
-//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-//   });
-// });
-
-//new
 
 // Set up handlebars
 var exphbs = require("express-handlebars");
@@ -70,9 +66,8 @@ app.get("/", function(req, res) {
   });
 });
 
-
-// Start our server so that it can begin listening to client requests.
+// Start server so that it can begin listening to client requests.
 app.listen(PORT, function() {
-  // Log (server-side) when our server has started
+  // Log (server-side) when server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });

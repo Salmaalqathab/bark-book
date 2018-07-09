@@ -1,3 +1,11 @@
-
+DROP DATABASE IF EXISTS dogs_DB;
 CREATE DATABASE dogs_DB;
 
+USE dogs_DB;
+
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
+);
