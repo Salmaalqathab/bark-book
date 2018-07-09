@@ -27,19 +27,19 @@ module.exports = function (sequelize, DataTypes) {
       // defaultValue: null
     },
     dogPhoto: {
-      type: DataTypes.CHAR,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true
       // defaultValue: null
     },
     favorite_park: {
-      type: DataTypes.CHAR,
+      type: DataTypes.TEXT,
       allowNull: false,
       unique: true
       // defaultValue: null
     },
     preferred_time: {
-      type: DataTypes.TIME,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true
       // defaultValue: null
