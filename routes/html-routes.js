@@ -6,18 +6,19 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
-    // if (err) {
-    //     return res.status(500).end();
-    // }
-  
       res.render("login");//change to login
   });
 
+
+  app.get("/newuser", function(req, res) {
+    res.render('newuser');
+  });
+
   app.get("/login", function(req, res) {
-    // if (req.user) {
-    //   res.redirect("/members");
-    // } else {
-      res.render("/login");
+    if (!req.user) 
+      res.render('/login');
+    else res.redirect('/members')
+      
     // }
     // res.sendFile(path.join(__dirname, "../public/login.html"));
   });
@@ -26,8 +27,5 @@ module.exports = function(app) {
     res.render("members");
   });
 
-  app.get("/newuser", function(req, res) {
-    res.render("newuser");
-  });
 
 };
