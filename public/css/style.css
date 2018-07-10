@@ -8,6 +8,7 @@
     background-color: rgb(248, 234, 217);
     opacity: .8;
 }
+/* Changed the name from container to form -- containers are built into materialize for structure */
 h5 {
     text-align: center;
     color:  teal;
@@ -18,4 +19,15 @@ body {
 /* background-image: url('./images/dog.jpg'); */
 width: 100%;
 height: auto;
+
+}
+/* 
+.form {
+    text-align: center;
+} */
+
+#mapid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    /* align-content: center; */
 }

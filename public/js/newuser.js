@@ -16,6 +16,7 @@ $("#new-user").on("click", function (event) {
     $.post("/api/newuser", newUser)
         .then(function(data) {
             console.log(data);
+            //this is the handlebars for the members page
         });
     
     location.href = "/signup";

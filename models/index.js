@@ -1,3 +1,4 @@
+//THIS FILE WAS CREATED VIA SEQUELIZE QUICK START
 'use strict';
 
 var fs        = require('fs');
