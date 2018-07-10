@@ -3,63 +3,18 @@
 
     <h1>Recommended Matches</h1>
 
-    <ul>
-        {{#each dogs}}
-        <li>
-            <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image">
-                            {{!--
-                            <img src="images/sample-1.jpg"> --}} {{this.id}}. {{this.dog_photo}}
+				
+						<div class="dog-entry">
+							<h3><strong>Dog Database</strong></h3>
+						</div>
+						<div class="well-section">
+					
+						<!-- Content will go in here -->
 
-                            <span class="card-title">{{this.id}}. {{this.dog_name}}</span>
-                        </div>
-
-                        <div class="card-content">
-                            <ul>
-                                <li>
-                                    My Owner's Name: {{this.id}}. {{this.user_name}}
-                                </li>
-
-                                <li>
-                                    My Favorite Park: {{this.id}}. {{this.favorite_park}}
-                                </li>
-
-                                <li>
-                                    I Prefer to Play At This Time: {{this.id}}. {{this.preferred_time}}
-                                </li>
-
-                                <li>
-                                    How Big Am I? {{this.id}}. {{this.size}}
-                                </li>
-
-                                <li>
-                                    My Personality Type: {{this.id}}. {{this.personality}}
-                                </li>
-
-                                <li>
-                                    My Activity Level: {{this.id}}. {{this.activity_level}}
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="card-action">
-                            <button>
-                                <a href="#">Contact Me</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-        </li>
-        {{/each}}
-    </ul>
-    </div>
-    <br>
-    <hr>
-    <br> {{!-- LEAFLET MAP NEEDS TO BE RESIZED --}}
-    <div id="mapid" style="width: 700px; height: 400px">
-
-    </div>
-
-</div>
+						</div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div id="mapid" style="width: 700px; height: 400px"></div>
+<!-- Custom Script -->
+<script src="js/signup.js" type="text/javascript"></script>

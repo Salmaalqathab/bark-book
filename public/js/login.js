@@ -1,4 +1,3 @@
-//add jquery for the login page
 
 // $(document).ready(function() {
     var loginForm = $("form.login");
