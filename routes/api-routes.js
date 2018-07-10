@@ -80,18 +80,12 @@ module.exports = function (app) {
   });
 
 
-
- 
-  app.get('api/:favorite_park', function(req,res){
+  app.get('api/:size', function(req,res){
     db.Dogs.findAll({
-      where: {
-      size: req.params.size
-      }
-    }).then(function (results){
-      console.log(results);
-      res.json(results);
+      favorite_park: req.params.size
     })
   })
+
   
 // make a route for parks // this is new
   app.get('/api/parks/:park', function(req, res) {
@@ -106,4 +100,5 @@ module.exports = function (app) {
       res.json(results);
     });
   });
+
 };
