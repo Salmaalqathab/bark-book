@@ -26,7 +26,7 @@ module.exports = function (app) {
       dogPhoto: req.body.dogPhoto,
       personality: req.body.personality,
       activity_level: req.body.activityLevel,
-      UserId: 8
+      UserId: req.body.UserId
       //change user id from 8 to req.body.UserId when authentication is included
     })
       .then(function () {
@@ -70,12 +70,23 @@ module.exports = function (app) {
   });
 
   // Get all dogs
-  app.get("/api/all", function (req, res) {
-    Dogs.findAll({}).then(function (results) {
+  
+   
+  app.get("/api/all", function(req, res) {
+    db.Dogs.findAll({}).then(function(results) {
       res.json(results);
       console.log(results);
     });
   });
+
+
+
+ 
+  app.get('api/:favorite_park', function(req,res){
+    db.Dogs.findAll({
+      favorite_park: req.params.favorite_park
+    })
+  })
 
 
 };
