@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict'; //this is not in passport
 
 var bcrypt = require("bcrypt-nodejs");
 
