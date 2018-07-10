@@ -5,11 +5,12 @@ var passport = require("../config/passport");
 
 
 module.exports = function(app) {
+  // Authenticate Login
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json("/members");
   });
 
-  // Add an entry
+  // Add a dog entry
   app.post("/api/signup", function(req, res) {
     console.log("newDog Data:");
     console.log(req.body);
@@ -31,6 +32,22 @@ module.exports = function(app) {
       });
   });
 
+  app.post("/api/newuser", function(req, res) {
+    console.log("newUser Data:");
+    console.log(req.body);
+    db.User.create({
+    
+      email: req.body.email,
+      password: req.body.password
+      
+      //change user id from 8 to req.body.UserId when authentication is included
+    })
+      .then(function() {
+        res.render("members");
+      });
+  });
+
+
   // app.post("/api/signup", function(req, res) {
   //   console.log(req.body);
   //   db.User.create({
@@ -44,21 +61,21 @@ module.exports = function(app) {
   //   });
   // });
 
-  // app.get("/logout", function(req, res) {
-  //   req.logout();
-  //   res.redirect("/");
-  // });
+  app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+  });
 
-  // app.get("/api/user_data", function(req, res) {
-  //   if (!req.user) {
-  //     res.json({});
-  //   }
-  //   else {
-  //     res.json({
-  //       email: req.user.email,
-  //       id: req.user.id
-  //     });
-  //   }
-  // });
+  app.get("/api/user_data", function(req, res) {
+    if (!req.user) {
+      res.json({});
+    }
+    else {
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
+  });
 
 };
