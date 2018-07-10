@@ -87,5 +87,18 @@ module.exports = function(app) {
       favorite_park: req.params.size
     })
   })
+// make a route for parks // this is new
+  app.get('api/:park', function(req, res) {
+    findPark = req.params.park.replace('%20'," ")
+    console.log(findPark);
+    db.Dogs.findAll({
+      where: {
+        favorite_park: findPark
+      }
+    }).then(function(results) {
+      console.log(results);
+      res.json(results);
+    });
+  });
 
 };
