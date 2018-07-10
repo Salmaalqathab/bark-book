@@ -48,6 +48,7 @@ $("#new-user").on("click", function (event) {
     $.post("/api/newuser", newUser)
         .then(function(data) {
             console.log(data);
+            //this is the handlebars for the members page
         });
 
 // compare dogsize & personality & dogpark to get top three matches

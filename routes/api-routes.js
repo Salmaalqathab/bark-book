@@ -43,7 +43,7 @@ module.exports = function(app) {
       //change user id from 8 to req.body.UserId when authentication is included
     })
       .then(function() {
-        res.render("members");
+        res.render('/signup');
       });
   });
 

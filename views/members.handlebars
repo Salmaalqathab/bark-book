@@ -1,21 +1,21 @@
 <div class="container">
-<h2>Welcome</h2>
+    <h2>Welcome</h2>
 
-<h1>Recommended Matches</h1>
+    <h1>Recommended Matches</h1>
 
-<ul>
-    {{#each dogs}}
+    <ul>
+        {{#each dogs}}
         <li>
             <div class="row">
                 <div class="col s12 m7">
                     <div class="card">
                         <div class="card-image">
-                            {{!-- <img src="images/sample-1.jpg"> --}}
-                            {{this.id}}. {{this.dog_photo}}
-                            
+                            {{!--
+                            <img src="images/sample-1.jpg"> --}} {{this.id}}. {{this.dog_photo}}
+
                             <span class="card-title">{{this.id}}. {{this.dog_name}}</span>
                         </div>
-                    
+
                         <div class="card-content">
                             <ul>
                                 <li>
@@ -43,20 +43,23 @@
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <div class="card-action">
-                            <button><a href="#">Contact Me</a></button>
+                            <button>
+                                <a href="#">Contact Me</a>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </li>
+        </li>
         {{/each}}
     </ul>
-</div>
-{{!-- <hr> --}}
-{{!-- LEAFLET MAP NEEDS TO BE RESIZED --}}
-<div id="mapid" style="width: 700px; height: 400px">
-    
-</div>
+    </div>
+    <br>
+    <hr>
+    <br> {{!-- LEAFLET MAP NEEDS TO BE RESIZED --}}
+    <div id="mapid" style="width: 700px; height: 400px">
+
+    </div>
 
 </div>
