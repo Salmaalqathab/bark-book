@@ -1,5 +1,4 @@
-//add jquery for the signup page
-// Capture Submit Click
+
 
     $("#form_submit").on("click", function (event) {
         // prevent form from trying to submit/refresh the page
@@ -24,10 +23,6 @@
             .then(function(data) {
                 console.log(data);
             });
-
-    // compare dogsize & personality & dogpark to get top three matches
-    //push result into another table - friends
-    // when user1 logs in, his dog should get top three  dog friends
     });
 
     
