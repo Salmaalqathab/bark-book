@@ -10,6 +10,8 @@ module.exports = function(app) {
     res.json("/members");
   });
 
+  
+
   // Add a dog entry
   app.post("/api/signup", function(req, res) {
     console.log("newDog Data:");
@@ -28,10 +30,11 @@ module.exports = function(app) {
       //change user id from 8 to req.body.UserId when authentication is included
     })
       .then(function() {
-        res.render("members");
+        // res.json("/members");
       });
   });
 
+  // Add new user
   app.post("/api/newuser", function(req, res) {
     console.log("newUser Data:");
     console.log(req.body);
@@ -40,31 +43,19 @@ module.exports = function(app) {
       email: req.body.email,
       password: req.body.password
       
-      //change user id from 8 to req.body.UserId when authentication is included
     })
       .then(function() {
-        res.render("members");
+        // res.json("/signin");
       });
   });
 
-
-  // app.post("/api/signup", function(req, res) {
-  //   console.log(req.body);
-  //   db.User.create({
-  //     email: req.body.email,
-  //     password: req.body.password
-  //   }).then(function() {
-  //     res.redirect(307, "/api/login");
-  //   }).catch(function(err) {
-  //     console.log(err);
-  //     res.json(err);
-  //   });
-  // });
-
+  // Logout
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
+
+  
 
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
@@ -77,5 +68,13 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Get all dogs
+  app.get("/api/all", function(req, res) {
+    Dogs.findAll({}).then(function(results) {
+      res.json(results);
+    });
+  });
+  
 
 };
