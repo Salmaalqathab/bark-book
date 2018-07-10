@@ -82,4 +82,10 @@ module.exports = function(app) {
     })
   })
 
+  app.get('api/:size', function(req,res){
+    db.Dogs.findAll({
+      favorite_park: req.params.size
+    })
+  })
+
 };
