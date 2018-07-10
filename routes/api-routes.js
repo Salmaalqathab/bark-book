@@ -80,14 +80,13 @@ module.exports = function (app) {
   });
 
 
-
- 
-  app.get('api/:favorite_park', function(req,res){
+  app.get('api/:size', function(req,res){
     db.Dogs.findAll({
-      favorite_park: req.params.favorite_park
+      favorite_park: req.params.size
     })
   })
 
+  
 // make a route for parks // this is new
 app.get('/api/parks/:park', function(req, res) {
   findPark = req.params.park.replace('%20'," ")

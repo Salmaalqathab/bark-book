@@ -1,6 +1,11 @@
 
-// Make a get request to our api route that will return every dog
-$.get("/api/all", function(data) {
+
+
+$("#show-all-dogs").on("click", function (event) {
+  // prevent form from trying to submit/refresh the page
+  event.preventDefault();
+  // Make a get request to our api route that will return every dog
+  $.get("/api/all", function(data) {
     // For each dog the server sends back
     for (var i = 0; i < data.length; i++) {
       // Create a parent div to hold data
@@ -23,6 +28,8 @@ $.get("/api/all", function(data) {
       $("#dog-well-" + i).append("<h3>Activity: " + data[i].activity_level + "</h4>");
     }
   });
+});
+
 
   // $.get("/api/:park", function(data) {
   //   // For each dog the server sends back
