@@ -4,7 +4,7 @@ var bcrypt = require("bcrypt-nodejs");
 
 module.exports = (sequelize, Sequelize) => {
 
-  //'User' table with dog profile
+  //'User' table with user information
   var User = sequelize.define("User", {
     email: {
       type: Sequelize.STRING,
@@ -17,24 +17,29 @@ module.exports = (sequelize, Sequelize) => {
     password: {
       type: Sequelize.STRING,
       allowNull: false
-    }
+    },
   });
 
+  // Sync database
+  // sequelize.sync().then(function() {
+  //   // Add a user
+  //   // User.create({
+  //   //   email: "poodlemom@yahoo.com",
+  //   //   password: "passiton"
+  //   // });
+  // });
 
-   
-    User.prototype.validPassword = function (password) {
-      return bcrypt.compareSync(password, this.password);
-    };
-    User.hook("beforeCreate", function (user) {
-      user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(12), null);
-    });
-  
-    return User;
-
-
+  User.prototype.validPassword = function (password) {
+    return bcrypt.compareSync(password, this.password);
+  };
+  User.hook("beforeCreate", function (user) {
+    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+  });
 
   // User.associate = function(models) {
-  //   // associations can be defined here
+  //   User.hasMany(models.Dogs, {
+  //     onDelete: "cascade"
+  //   });
   // };
-  // return User;
+  return User;
 };
