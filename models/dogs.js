@@ -40,6 +40,11 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
       allowNull: false
     }
+
+    // UserId: {
+    //   type: Sequelize.STRING,
+    //   allowNull: false
+    // }
   });
 
   

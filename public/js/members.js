@@ -14,7 +14,7 @@ $.get("/api/all", function(data) {
   
       // Add dog data to the well placed on the page
       $("#dog-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].dogName + "</h2>");
-      $("#dog-well-" + i).append("<h3>Photo: " + data[i].dogPhoto + "</h4>");
+      $("#dog-well-" + i).append("<img src=" + data[i].dogPhoto + ">");
       $("#dog-well-" + i).append("<h3>Owner: " + data[i].name + "</h4>");
       $("#dog-well-" + i).append("<h3>Favorite Park: " + data[i].favorite_park + "</h4>");
       $("#dog-well-" + i).append("<h3>Preferred Play Time: " + data[i].preferred_time + "</h4>");
@@ -23,4 +23,6 @@ $.get("/api/all", function(data) {
       $("#dog-well-" + i).append("<h3>Activity: " + data[i].activity_level + "</h4>");
     }
   });
+
+  
   
