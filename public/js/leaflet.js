@@ -37,43 +37,80 @@ $(document).ready(function() {
             }
           });
     }
-
+ 
     var marker1 = L.marker([38.944119,-77.031639], {icon:hydrant}).bindPopup('Upshur Dog Park').addTo(mymap);
     marker1.url = '/api/parks/Upshur Dog Park'
     marker1.on('click', function(){
         requestAndUpdateDOM(marker1.url);
     });
     var marker2 = L.marker([38.931593,-77.028424], {icon:hydrant}).bindPopup('Columbia Heights Dog Park').addTo(mymap);
-    marker2.url = 'api/ColumbiaHeightsDogPark'
+    marker2.url = '/api/parks/Columbia Heights Dog Park'
     marker2.on('click', function(){
-        window.location = (this.url);
+        requestAndUpdateDOM(marker2.url);
     });
     var marker3 = L.marker([38.923776,-77.044978], {icon:hydrant}).addTo(mymap).bindPopup('Walter Pierce Park').openPopup();
-    marker3.url = 'api/Walterpiercepark'
+    marker3.url = '/api/Walter Pierce Park'
     marker3.on('click', function(){
-        window.location = (this.url);
+        requestAndUpdateDOM(marker3.url);
     });
-    L.marker([38.918365,-77.01655], {icon:hydrant}).addTo(mymap).bindPopup('Gage Eckington Dog Park').openPopup();
-    L.marker([38.914088,-77.038475], {icon:hydrant}).addTo(mymap).bindPopup('S Street Dog Park').openPopup();
-    L.marker([38.912205,-77.027035], {icon:hydrant}).addTo(mymap).bindPopup('Shaw Dog Park').openPopup();
-    L.marker([38.914082,-77.050625], {icon:hydrant}).addTo(mymap).bindPopup('Mitchell Park').openPopup();
-    L.marker([38.902249,-77.053308], {icon:hydrant}).addTo(mymap).bindPopup('Francis Dog Park').openPopup();
-    L.marker([38.934632,-77.068648], {icon:hydrant}).addTo(mymap).bindPopup('Rosedale Conservancy').openPopup();
-    L.marker([38.935699,-77.077194], {icon:hydrant}).addTo(mymap).bindPopup('Newark Street Dog Park').openPopup();
-    L.marker([38.926492,-76.974909], {icon:hydrant}).addTo(mymap).bindPopup('Langdon Dog Park').openPopup();
-    L.marker([38.894782,-76.992088], {icon:hydrant}).addTo(mymap).bindPopup('Kingsman Dog Park').openPopup();
-    L.marker([38.877902,-76.993883], {icon:hydrant}).addTo(mymap).bindPopup('Virginia Avenue Park').openPopup();
-    L.marker([38.881958,-77.003531], {icon:hydrant}).addTo(mymap).bindPopup('Garfield Park').openPopup();
-    L.marker([38.877106,-77.003119], {icon:hydrant}).addTo(mymap).bindPopup('Canal Park').openPopup();
-
-    var marker = L.marker([52, 12], {});
-marker.url = 'www.google.com'
-
-marker.on('click', function(){
-window.location = (this.url);
-});
-
-
-
-
+    var marker4 = L.marker([38.918365,-77.01655], {icon:hydrant}).addTo(mymap).bindPopup('Gage Eckington Dog Park').openPopup();
+    marker4.url = '/api/Gage Eckington Dog Park'
+    marker4.on('click', function(){
+        requestAndUpdateDOM(marker4.url);
+    });
+    var marker5 = L.marker([38.914088,-77.038475], {icon:hydrant}).addTo(mymap).bindPopup('S Street Dog Park').openPopup();
+    marker5.url = '/api/S Street Dog Park'
+    marker5.on('click', function(){
+        requestAndUpdateDOM(marker5.url);
+    });
+    var marker6 = L.marker([38.912205,-77.027035], {icon:hydrant}).addTo(mymap).bindPopup('Shaw Dog Park').openPopup();
+    marker6.url = '/api/Shaw Dog Park'
+    marker6.on('click', function(){
+        requestAndUpdateDOM(marker6.url);
+    });
+    var marker7 = L.marker([38.914082,-77.050625], {icon:hydrant}).addTo(mymap).bindPopup('Mitchell Park').openPopup();
+    marker7.url = '/api/Mitchell Park'
+    marker7.on('click', function(){
+        requestAndUpdateDOM(marker7.url);
+    });
+    var marker8 = L.marker([38.902249,-77.053308], {icon:hydrant}).addTo(mymap).bindPopup('Francis Dog Park').openPopup();
+    marker8.url = '/api/Francis Dog Park'
+    marker8.on('click', function(){
+        requestAndUpdateDOM(marker8.url);
+    });
+    var marker9 = L.marker([38.934632,-77.068648], {icon:hydrant}).addTo(mymap).bindPopup('Rosedale Conservancy').openPopup();
+    marker9.url = '/api/Rosedale Conservancy'
+    marker9.on('click', function(){
+        requestAndUpdateDOM(marker9.url);
+    });
+    var marker10 = L.marker([38.935699,-77.077194], {icon:hydrant}).addTo(mymap).bindPopup('Newark Street Dog Park').openPopup();
+    marker10.url = '/api/Newark Street Dog Park'
+    marker10.on('click', function(){
+        requestAndUpdateDOM(marker10.url);
+    });
+    var marker11 = L.marker([38.926492,-76.974909], {icon:hydrant}).addTo(mymap).bindPopup('Langdon Dog Park').openPopup();
+    marker11.url = '/api/Langdon Dog Park'
+    marker11.on('click', function(){
+        requestAndUpdateDOM(marker11.url);
+    });
+    var marker12 = L.marker([38.894782,-76.992088], {icon:hydrant}).addTo(mymap).bindPopup('Kingsman Dog Park').openPopup();
+    marker12.url = '/api/Kingsman Dog Park'
+    marker12.on('click', function(){
+        requestAndUpdateDOM(marker12.url);
+    });
+    var marker13 = L.marker([38.877902,-76.993883], {icon:hydrant}).addTo(mymap).bindPopup('Virginia Avenue Park').openPopup();
+    marker13.url = '/api/Virginia Avenue Park'
+    marker13.on('click', function(){
+        requestAndUpdateDOM(marker13.url);
+    });
+    var marker14 = L.marker([38.881958,-77.003531], {icon:hydrant}).addTo(mymap).bindPopup('Garfield Park').openPopup();
+    marker14.url = '/api/Garfield Park'
+    marker14.on('click', function(){
+        requestAndUpdateDOM(marker14.url);
+    });
+    var marker15 = L.marker([38.877106,-77.003119], {icon:hydrant}).addTo(mymap).bindPopup('Canal Park').openPopup();
+    marker15.url = '/api/Canal Park'
+    marker15.on('click', function(){
+        requestAndUpdateDOM(marker15.url);
+    });
 });
