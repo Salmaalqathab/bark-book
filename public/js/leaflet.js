@@ -12,10 +12,8 @@ $(document).ready(function() {
         popupAnchor: [11,0]
     });
 
-    var marker1 = L.marker([38.944119,-77.031639], {icon:hydrant}).bindPopup('Upshur Dog Park').addTo(mymap);
-    marker1.url = 'api/Upshur Dog Park'
-    marker1.on('click', function(){
-        $.get(marker1.url, function(data) {
+    function requestAndUpdateDOM (url) {
+        $.get(url, function(data) {
             // For each dog the server sends back
             for (var i = 0; i < data.length; i++) {
               // Create a parent div to hold data
@@ -38,6 +36,12 @@ $(document).ready(function() {
               $("#dog-well-" + i).append("<h3>Activity: " + data[i].activity_level + "</h4>");
             }
           });
+    }
+
+    var marker1 = L.marker([38.944119,-77.031639], {icon:hydrant}).bindPopup('Upshur Dog Park').addTo(mymap);
+    marker1.url = '/api/parks/Upshur Dog Park'
+    marker1.on('click', function(){
+        requestAndUpdateDOM(marker1.url);
     });
     var marker2 = L.marker([38.931593,-77.028424], {icon:hydrant}).bindPopup('Columbia Heights Dog Park').addTo(mymap);
     marker2.url = 'api/ColumbiaHeightsDogPark'

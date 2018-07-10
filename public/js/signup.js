@@ -23,6 +23,8 @@
             .then(function(data) {
                 console.log(data);
             });
+            
+        location.href = "/members";
     });
 
     
