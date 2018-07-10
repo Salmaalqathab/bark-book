@@ -13,9 +13,9 @@ module.exports = function(app) {
     res.render("login");
   });    
 
-  // app.get("/members", function(req, res) {
-  //       res.render("members");
-  // });
+  app.get("/members", function(req, res) {
+    res.render("members");
+  })
 
   app.get("/login", function(req, res) {
     if (req.user) {
@@ -28,5 +28,15 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, function(req, res) {
     res.redirect("members");
   });
+
+  app.get("/newuser", function(req, res) {
+    res.render("newuser");
+  });
+
+  app.get("/signup", function(req, res) {
+    res.render("signup");
+  })
+
+
 
 };
