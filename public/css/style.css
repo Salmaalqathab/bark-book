@@ -1,10 +1,12 @@
 
 /* Sign up (profile) page */
-.form {
-    width: 500px;
+
+.wrapper {
+    background-image: url("/images/body2.jpeg");
+    padding: 50px;
 }
 body {
-    background-image: url("/images/body2.jpeg")
+    background-color: #b2dbdf;
 }
 
 /* SIGN UP CSS */
@@ -128,6 +130,9 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     color: #4f84a8;
     text-align: center;
 }
+
+
+
 /* Start of CSS for newuser page */
 .newuser-form {
     margin: 70px auto;
@@ -157,6 +162,7 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     margin: 10px 0px;
     padding-left: 15px;
     padding-bottom: 15px;
+    background-color: white;
 }
 
 #search-by-activity {
@@ -164,6 +170,7 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     margin: 10px 0px;
     padding-left: 15px;
     padding-bottom: 15px;
+    background-color: white;
 }
 
 #search-by-personality {
@@ -171,6 +178,7 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     margin: 10px 0px;
     padding-left: 15px;
     padding-bottom: 15px;
+    background-color: white;
 }
 
 #search-all {
@@ -178,8 +186,14 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     margin: 10px 0px;
     padding-left: 15px;
     padding-bottom: 15px;
+    background-color: white;
 }
-
+.members-title {
+    background-color: white;
+    padding: 20px;
+    margin-top: 70px;
+    border: solid 3px rgb(250, 123, 64);
+}
 .mp-title {
     font-family: 'Paytone One';
     color: rgb(250, 123, 64);
@@ -225,3 +239,4 @@ img #reilly {
     font-family: 'Paytone One';
     color:#524b4b;
 }
+
