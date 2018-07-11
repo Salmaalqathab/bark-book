@@ -1,11 +1,11 @@
 
 /* Sign up (profile) page */
-.form {
-    width: 500px;
+
+.wrapper {
+    background-image: url("/images/body2.jpeg");
+    padding: 50px;
 }
-body {
-    background-image: url("/images/body2.jpeg")
-}
+
 /* SIGN UP CSS */
 #sign-up {
     /* width:600px; */
