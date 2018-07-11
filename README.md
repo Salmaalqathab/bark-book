@@ -3,7 +3,7 @@
 # Barkbook<h1>
 ![barkbook-logo](https://user-images.githubusercontent.com/34350992/42582898-20698aba-84fe-11e8-8fb2-c4e43bc63c79.png)
 
-1. barkbook is a website where you can take your dog to there favorite park and meet people and other dogs there, who have the same interst as your dog.
+1. barkbook is a pet-tinder website where you can take your dog to there favorite park and meet other dogs there, who have the same interst as your dog.
 ## what we used<h2>
 1. passport.
 1. handlebars.
