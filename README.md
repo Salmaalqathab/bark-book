@@ -9,8 +9,9 @@
 1. handlebars.
 1. leaflet.
 1. routs.
-1. materialized.
-1. mysql.
+1. matrerialzed.
+1. MySQL.
+1. squalized.
 
 ![barkbook](https://user-images.githubusercontent.com/34350992/42552670-76bcdbb8-84ab-11e8-9a6d-580b4466d16d.jpg)
 
