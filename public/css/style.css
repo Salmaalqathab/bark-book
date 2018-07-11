@@ -33,6 +33,10 @@
     text-align: center;
     color: #4f84a8;      
  }
+#dog_pic {
+    /* text-align: center; */
+    color: #4f84a8;   
+}
 .input-field input:focus + label {
     color:rgb(250, 123, 64) !important;
  }
@@ -61,7 +65,8 @@ input[type=text]:not(.browser-default).validate+label {
     background-color: rgb(250, 123, 64);
     border: 2px solid rgb(250, 123, 64);
 }
-input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), textarea.materialize-textarea {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid darkgrey;
@@ -81,36 +86,18 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     transition: box-shadow .3s, border .3s;
     transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
 }
-input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
-    border-bottom: 2px solid rgb(255, 123, 0);
-    box-shadow: 0 1px 0 0 solid rgb(255, 123, 0);
-    }
-body {
-    /* background-image: url('./images/dog.jpg'); */
-    width: 100%;
-    height: auto;
-    
-    }
-/* 
-.form {
-    text-align: center;
+/* input:not([type]):focus, input[type=text]:not(.browser-default):focus, input[type=password]:not(.browser-default):focus, input[type=email]:not(.browser-default):focus,  textarea.materialize-textarea:focus {
+    color: rgb(250, 123, 64);
 } */
+input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid rgb(250, 123, 64);
+    box-shadow: 0 1px 0 0 rgb(250, 123, 64);
+}
 
-#mapid {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: auto;
-    /* align-content: center; */
-}
-.dog-size {
-    float: left;
-}
-/* .nav {
-    color: #fff;
-    background-color: #5ea3d1 !important;
-    width: 100%;
-    height: 80px;
-    line-height: 56px;
-} */
+.form-control input:focus + label {
+    color:rgb(250, 123, 64) !important;
+ }
+
 
 
 /* start of CSS for login page */
@@ -124,8 +111,13 @@ body {
 }
 #login-btn {
     background-color: rgb(250, 123, 64);
+    align-content: center;
 }
 
+.orSignUp {
+    color: #4f84a8;
+    text-align: center;
+}
 /* Start of CSS for newuser page */
 .newuser-form {
     margin: 70px auto;
@@ -136,4 +128,11 @@ body {
 }
 #new-user {
     background-color: rgb(250, 123, 64);
+}
+
+/* CSS MEMBERS PAGE */
+#mapid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    /* align-content: center; */
 }
