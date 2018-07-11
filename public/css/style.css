@@ -1,33 +1,165 @@
-.form {
-    width: 500px;
+body {
+    background-image: url("/images/body2.jpeg")
+}
+/* SIGN UP CSS */
+#sign-up {
+    /* width:600px; */
     height: auto;
-    border:  teal solid 2px;
+    border:  darkgray solid 2px;
     padding: 20px;
     margin-top: 75px;
     margin-bottom: 75px;
-    background-color: rgb(248, 234, 217);
-    opacity: .8;
-}
-/* Changed the name from container to form -- containers are built into materialize for structure */
-h5 {
+    background-color: white;
+    /* opacity: .8; */
     text-align: center;
-    color:  teal;
-    font-weight: bolder;
-}
+    align-content: center;
+ }
+ 
+#form_submit{
+    background-color: rgb(250, 123, 64);  
+    cursor: pointer; 
+ }
 
-body {
-/* background-image: url('./images/dog.jpg'); */
-width: 100%;
-height: auto;
-
-}
-/* 
-.form {
+#dog_size {
     text-align: center;
-} */
+    color: #4f84a8;
+ }
+#personality {
+    text-align: center;
+    color: #4f84a8;
+ }
+#activity_level {
+    text-align: center;
+    color: #4f84a8;   
+ }
+#dog_park {
+    text-align: center;
+    color: #4f84a8;      
+ }
+#dog_pic {
+    /* text-align: center; */
+    color: #4f84a8;   
+}
+.input-field .prefix.active {
+    color: rgb(250, 123, 64);
+}
+.input-field input:focus + label {
+    color:rgb(250, 123, 64) !important;
+ }
+/* label underline focus color */
+.row .input-field input:focus {
+    border-bottom: 1px solid rgb(250, 123, 64) !important;
+    box-shadow: 0 1px 0 0 rgb(250, 123, 64) !important
+ }
+ 
+ 
+input[type=text]:not(.browser-default):disabled+label {
+    color: #4f84a8;
+    font-size: 18px;
+    font-weight: bold;
+ }
+  
+  
+input[type=text]:not(.browser-default).validate+label {
+    color: #4f84a8;
+    font-size: 18px;
+    font-weight: bold;
+ }
+/* end of abi css */
 
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: rgb(250, 123, 64);
+    border: 2px solid rgb(250, 123, 64);
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid rgb(250, 123, 64);
+    box-shadow: 0 1px 0 0 rgb(250, 123, 64);
+}
+
+.form-control input:focus + label {
+    color:rgb(250, 123, 64) !important;
+ }
+
+
+
+/* start of CSS for login page */
+.welcome-box {
+    margin: 70px auto;
+    padding: 10px 50px;
+    border: darkgray solid 2px;
+    width: 700px;
+    color: #4f84a8;
+    text-align: center;
+    background-color: white;
+
+}
+.login-form {
+    margin: 30px auto;
+    padding: 10px 50px;
+    padding-bottom: 30px;
+    border: darkgray solid 2px;
+    width: 700px;
+    background-color: white;
+    /* opacity: .8; */
+
+}
+#login-btn {
+    background-color: rgb(250, 123, 64);
+    align-content: center;
+}
+
+.orSignUp {
+    color: #4f84a8;
+    text-align: center;
+}
+/* Start of CSS for newuser page */
+.newuser-form {
+    margin: 70px auto;
+    padding: 10px 50px;
+    padding-bottom: 30px;
+    border: darkgray solid 2px;
+    width: 700px;
+    background-color: white;
+}
+#new-user {
+    background-color: rgb(250, 123, 64);
+}
+.orLogin {
+    color: #4f84a8;
+    text-align: center; 
+}
+/* CSS MEMBERS PAGE */
 #mapid {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: auto;
     /* align-content: center; */
+}
+
+#search-by-size {
+    border: solid 3px #4f84a8;
+    margin: 10px 0px;
+}
+
+#search-by-activity {
+    border: solid 3px rgb(250, 123, 64);
+    margin: 10px 0px;
+}
+
+#search-by-personality {
+    border: solid 3px #4f84a8;
+    margin: 10px 0px;
+}
+
+#search-all {
+    border: solid 3px rgb(250, 123, 64);
+    margin: 10px 0px;
+}
+
+.members-title {
+    height: 400px;
+}
+
+img #reilly {
+    height: 400px;
 }

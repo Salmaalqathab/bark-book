@@ -1,30 +1,54 @@
 <div class="container">
-    <h2>Welcome</h2>
+    
 
-    <h1>Recommended Matches</h1>
-
-				
-				<div class="dog-entry">
-					<h3><strong>Dog Database</strong></h3>
-
-				</div>
+	<div class="row members-title">
+		<div class="col s7">
+			<h1>Meet the Dogs of Washington, DC</h1>
+			<h2>Find Your Dog's New Best Friend</h2>
+		</div>
 			
-                        <br>
-                        <hr>
-                        <br>
-						<h3>Click on a Park to See the Dogs</h3>
-                        <div id="mapid" style="width: 700px; height: 400px"></div>
+		<div class="col s5">
+			<img id="reilly" src="../images/reilly.png">
+		</div>
+	</div>
 
-						
-						<div id="well-section">
-							<!-- Content will go in here -->
-						</div>
+        <br>
+        <hr>
+        <br>
 
+		<h4>Click on A Hydrant to Find Other Dogs At Your Park</h4>
+        <div id="mapid" style="width: 700px; height: 400px"></div>
 
-				
-				<button id="show-all-dogs" class="btn waves-effect waves-light" type="submit" name="action">See All Dogs!<i class="material-icons right">send</i></button>
+		<div id="well-section">
+			<!-- Content will go in here -->
+		</div>
 
-	<button id="show-all-dogs" class="btn waves-effect waves-light" type="submit" name="action">See All Dogs!<i class="material-icons right">send</i></button>
+		<div id="search-by-size">
+			<h4>Search By Dog Size</h4>
+			<button id="small-dogs" class="btn waves-effect waves-light" type="submit" name="action">Small Dogs<i class="small material-icons right">pets</i></button>
+			<button id="medium-dogs" class="btn waves-effect waves-light" type="submit" name="action">Medium Dogs<i class="medium material-icons right">pets</i></button>
+			<button id="large-dogs" class="btn waves-effect waves-light" type="submit" name="action">Large Dogs<i class="large material-icons right">pets</i></button>
+		</div>
 
+		<div id="search-by-activity">
+			<h4>Search By Activity Level</h4>
+			<button id="sedentary-dogs" class="btn waves-effect waves-light" type="submit" name="action">Sedentary Dogs<i class="material-icons right">hotel</i></button>
+			<button id="moderately-energetic-dogs" class="btn waves-effect waves-light" type="submit" name="action">Moderately-Energetic Dogs<i class="material-icons right">directions_walk</i></button>
+			<button id="hyperactive-dogs" class="btn waves-effect waves-light" type="submit" name="action">Hyperactive Dogs<i class="material-icons right">directions_run</i></button>
+		</div>
+		
+		<div id="search-by-personality">
+			<h4>Search By Personality</h4>
+			<button id="confident-dogs" class="btn waves-effect waves-light" type="submit" name="action">Confident Dogs<i class="material-icons right">mood</i></button>
+			<button id="timid-dogs" class="btn waves-effect waves-light" type="submit" name="action">Timid Dogs<i class="material-icons right">mood_bad</i></button>
+			<button id="independent-dogs" class="btn waves-effect waves-light" type="submit" name="action">Independent Dogs<i class="material-icons right">mood_bad</i></button>
+			<button id="laid-back-dogs" class="btn waves-effect waves-light" type="submit" name="action">Laid-Back Dogs<i class="material-icons right">sentiment_very_satisfied</i></button>
+			<button id="adaptable-dogs" class="btn waves-effect waves-light" type="submit" name="action">Adaptable Dogs<i class="material-icons right">sentiment_satisfied</i></button>
+		</div>
+		
+		<div id="search-all">
+			<h4>Still Haven't Found What You're Looking For?</h4>
+			<button id="show-all-dogs" class="btn waves-effect waves-light" type="submit" name="action">See All Dogs!<i class="material-icons right">send</i></button>
+		</div>
 <!-- Custom Script -->
 <script src="js/members.js" type="text/javascript"></script>
