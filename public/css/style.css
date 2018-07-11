@@ -9,6 +9,12 @@ body {
     background-color: #b2dbdf;
 }
 
+.logo-title {
+    position: relative;
+    bottom: 15px;
+    padding-left: 15px;
+}
+
 /* SIGN UP CSS */
 #sign-up {
     /* width:600px; */
@@ -233,6 +239,7 @@ img #reilly {
     font-family: 'Short Stack';
     max-width: 700px;
     padding-bottom: 5px;
+    background-color: white;
 }
 
 .option {
