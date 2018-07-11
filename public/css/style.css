@@ -31,3 +31,31 @@ height: auto;
     margin: auto;
     /* align-content: center; */
 }
+
+#search-by-size {
+    border: solid 3px #4f84a8;
+    margin: 10px 0px;
+}
+
+#search-by-activity {
+    border: solid 3px rgb(250, 123, 64);
+    margin: 10px 0px;
+}
+
+#search-by-personality {
+    border: solid 3px #4f84a8;
+    margin: 10px 0px;
+}
+
+#search-all {
+    border: solid 3px rgb(250, 123, 64);
+    margin: 10px 0px;
+}
+
+.members-title {
+    height: 400px;
+}
+
+img #reilly {
+    height: 400px;
+}
