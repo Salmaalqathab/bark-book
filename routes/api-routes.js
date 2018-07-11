@@ -10,8 +10,6 @@ module.exports = function (app) {
     res.json("/members");
   });
 
-
-
   // Add a dog entry
   app.post("/api/signup", function (req, res) {
     console.log("newDog Data:");
@@ -55,8 +53,6 @@ module.exports = function (app) {
   //   res.redirect("/");
   // });
 
-
-
   app.get("/api/user_data", function (req, res) {
     if (!req.user) {
       res.json({});
@@ -70,8 +66,6 @@ module.exports = function (app) {
   });
 
   // Get all dogs
-  
-   
   app.get("/api/all", function(req, res) {
     db.Dogs.findAll({}).then(function(results) {
       res.json(results);
@@ -79,27 +73,54 @@ module.exports = function (app) {
     });
   });
 
-
-
- 
-  app.get('api/:favorite_park', function(req,res){
-    db.Dogs.findAll({
-      favorite_park: req.params.favorite_park
-    })
-  })
-
 // make a route for parks // this is new
-app.get('/api/parks/:park', function(req, res) {
-  findPark = req.params.park.replace('%20'," ")
-  console.log(findPark);
-  db.Dogs.findAll({
-    where: {
-      favorite_park: findPark
-    }
-  }).then(function(results) {
-    console.log(results);
-    res.json(results);
+  app.get('/api/parks/:park', function(req, res) {
+    findPark = req.params.park.replace('%20'," ")
+    console.log(findPark);
+    db.Dogs.findAll({
+      where: {
+        favorite_park: findPark
+      }
+    }).then(function(results) {
+      console.log(results);
+      res.json(results);
+    });
   });
-});
+
+  // Pick dogs by size
+  app.get('/api/size/:size', function(req,res){
+    db.Dogs.findAll({
+      where: {
+        size: req.params.size
+      }
+    }).then(function(results) {
+      console.log(results);
+      res.json(results);
+    });
+  });  
+
+  // Pick dogs by activity level
+  app.get('/api/activity_level/:activity_level', function(req,res){
+    db.Dogs.findAll({
+      where: {
+        activity_level: req.params.activity_level
+      }
+    }).then(function(results) {
+      console.log(results);
+      res.json(results);
+    });
+  });  
+
+  // Pick dogs by personality
+  app.get('/api/personality/:personality', function(req,res){
+    db.Dogs.findAll({
+      where: {
+        personality: req.params.personality
+      }
+    }).then(function(results) {
+      console.log(results);
+      res.json(results);
+    });
+  });  
 
 };
