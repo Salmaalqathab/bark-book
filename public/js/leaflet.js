@@ -29,13 +29,13 @@ $(document).ready(function() {
           
               // Add dog data to the well placed on the page
               $("#dog-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].dogName + "</h2>");
-              $("#dog-well-" + i).append("<img src=" + data[i].dogPhoto + ">");
-              $("#dog-well-" + i).append("<h3>Owner: " + data[i].name + "</h4>");
-              $("#dog-well-" + i).append("<h3>Favorite Park: " + data[i].favorite_park + "</h4>");
-              $("#dog-well-" + i).append("<h3>Preferred Play Time: " + data[i].preferred_time + "</h4>");
-              $("#dog-well-" + i).append("<h3>Size: " + data[i].size + "</h4>");
-              $("#dog-well-" + i).append("<h3>Personality: " + data[i].personality + "</h4>");
-              $("#dog-well-" + i).append("<h3>Activity: " + data[i].activity_level + "</h4>");
+              $("#dog-well-" + i).append("<img class='dog-image' src=" + data[i].dogPhoto + ">");
+              $("#dog-well-" + i).append("<h5>Owner: " + data[i].name + "</h5>");
+              $("#dog-well-" + i).append("<h5>Favorite Park: " + data[i].favorite_park + "</h5>");
+              $("#dog-well-" + i).append("<h5>Preferred Play Time: " + data[i].preferred_time + "</h5>");
+              $("#dog-well-" + i).append("<h5>Size: " + data[i].size + "</h5>");
+              $("#dog-well-" + i).append("<h5>Personality: " + data[i].personality + "</h5>");
+              $("#dog-well-" + i).append("<h5>Activity: " + data[i].activity_level + "</h5>");
             }
           });
     }

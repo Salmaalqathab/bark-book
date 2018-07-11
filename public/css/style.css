@@ -1,3 +1,8 @@
+
+/* Sign up (profile) page */
+.form {
+    width: 500px;
+}
 body {
     background-image: url("/images/body2.jpeg")
 }
@@ -67,6 +72,17 @@ input[type=text]:not(.browser-default).validate+label {
  }
 /* end of abi css */
 
+body {
+    /* background-image: url('./images/dog.jpg'); */
+    width: 100%;
+    height: auto;
+    cursor: url(/images/dog-bone.png), auto;
+}
+
+a:hover {
+    cursor: url(/images/dog-bone.png), auto;
+}
+
 [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
     background-color: rgb(250, 123, 64);
     border: 2px solid rgb(250, 123, 64);
@@ -109,6 +125,7 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     align-content: center;
 }
 
+
 .orSignUp {
     color: #4f84a8;
     text-align: center;
@@ -136,30 +153,77 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     /* align-content: center; */
 }
 
+/* Members Page  */
 #search-by-size {
     border: solid 3px #4f84a8;
     margin: 10px 0px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 #search-by-activity {
     border: solid 3px rgb(250, 123, 64);
     margin: 10px 0px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 #search-by-personality {
     border: solid 3px #4f84a8;
     margin: 10px 0px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 #search-all {
     border: solid 3px rgb(250, 123, 64);
     margin: 10px 0px;
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
-.members-title {
-    height: 400px;
+.mp-title {
+    font-family: 'Paytone One';
+    color: rgb(250, 123, 64);
+}
+
+.mp-tagline {
+    font-family: 'Short Stack';
+    color: #4f84a8;  
 }
 
 img #reilly {
-    height: 400px;
+    height: 375px;
+    border: solid 2px rgb(250, 123, 64);
+}
+
+.dog-image {
+    height: 400px;;
+}
+
+#confident-dogs, #timid-dogs, #independent-dogs, #adaptable-dogs, #laid-back-dogs, #small-dogs, 
+#medium-dogs, #large-dogs {
+    background-color: rgb(250, 123, 64);
+    margin: 5px 15px 10px 0px;
+    font-family: 'Short Stack';
+}    
+
+#sedentary-dogs, #moderately-energetic-dogs, #hyperactive-dogs, #show-all-dogs {
+    background-color: #4f84a8;
+    margin: 5px 15px 5px 0px;
+    font-family: 'Short Stack';
+}
+
+.well {
+    border: solid 3px #4f84a8;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Short Stack';
+    max-width: 700px;
+    padding-bottom: 5px;
+}
+
+.option {
+    font-family: 'Paytone One';
+    color:#524b4b;
 }
