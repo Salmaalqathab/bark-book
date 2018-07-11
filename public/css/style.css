@@ -6,6 +6,7 @@
 body {
     background-image: url("/images/body2.jpeg")
 }
+
 /* SIGN UP CSS */
 #sign-up {
     /* width:600px; */
@@ -57,13 +58,11 @@ body {
     box-shadow: 0 1px 0 0 rgb(250, 123, 64) !important
  }
  
- 
 input[type=text]:not(.browser-default):disabled+label {
     color: #4f84a8;
     font-size: 18px;
     font-weight: bold;
  }
-  
   
 input[type=text]:not(.browser-default).validate+label {
     color: #4f84a8;
@@ -78,10 +77,10 @@ body {
     height: auto;
     cursor: url(/images/dog-bone.png), auto;
 }
-
+/* 
 a:hover {
     cursor: url(/images/dog-bone.png), auto;
-}
+} */
 
 [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
     background-color: rgb(250, 123, 64);
@@ -97,8 +96,6 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     color:rgb(250, 123, 64) !important;
  }
 
-
-
 /* start of CSS for login page */
 .welcome-box {
     margin: 70px auto;
@@ -110,6 +107,7 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     background-color: white;
 
 }
+
 .login-form {
     margin: 30px auto;
     padding: 10px 50px;
@@ -120,11 +118,11 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     /* opacity: .8; */
 
 }
+
 #login-btn {
     background-color: rgb(250, 123, 64);
     align-content: center;
 }
-
 
 .orSignUp {
     color: #4f84a8;
