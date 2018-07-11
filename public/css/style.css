@@ -1,3 +1,6 @@
+body {
+    background-image: url("/images/body2.jpeg")
+}
 /* SIGN UP CSS */
 #sign-up {
     /* width:600px; */
@@ -6,8 +9,8 @@
     padding: 20px;
     margin-top: 75px;
     margin-bottom: 75px;
-    /* background-color: rgb(247, 200, 159); */
-    opacity: .8;
+    background-color: white;
+    /* opacity: .8; */
     text-align: center;
     align-content: center;
  }
@@ -36,6 +39,9 @@
 #dog_pic {
     /* text-align: center; */
     color: #4f84a8;   
+}
+.input-field .prefix.active {
+    color: rgb(250, 123, 64);
 }
 .input-field input:focus + label {
     color:rgb(250, 123, 64) !important;
@@ -66,29 +72,6 @@ input[type=text]:not(.browser-default).validate+label {
     border: 2px solid rgb(250, 123, 64);
 }
 
-input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), textarea.materialize-textarea {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid darkgrey;
-    border-radius: 0;
-    outline: none;
-    height: 3rem;
-    width: 100%;
-    font-size: 16px;
-    margin: 0 0 8px 0;
-    padding: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    -webkit-transition: border .3s, -webkit-box-shadow .3s;
-    transition: border .3s, -webkit-box-shadow .3s;
-    transition: box-shadow .3s, border .3s;
-    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
-}
-/* input:not([type]):focus, input[type=text]:not(.browser-default):focus, input[type=password]:not(.browser-default):focus, input[type=email]:not(.browser-default):focus,  textarea.materialize-textarea:focus {
-    color: rgb(250, 123, 64);
-} */
 input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid rgb(250, 123, 64);
     box-shadow: 0 1px 0 0 rgb(250, 123, 64);
@@ -101,12 +84,24 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
 
 
 /* start of CSS for login page */
-.login-form {
+.welcome-box {
     margin: 70px auto;
+    padding: 10px 50px;
+    border: darkgray solid 2px;
+    width: 700px;
+    color: #4f84a8;
+    text-align: center;
+    background-color: white;
+
+}
+.login-form {
+    margin: 30px auto;
     padding: 10px 50px;
     padding-bottom: 30px;
     border: darkgray solid 2px;
     width: 700px;
+    background-color: white;
+    /* opacity: .8; */
 
 }
 #login-btn {
@@ -125,11 +120,15 @@ input[type=password]:not(.browser-default):focus:not([readonly]), input[type=ema
     padding-bottom: 30px;
     border: darkgray solid 2px;
     width: 700px;
+    background-color: white;
 }
 #new-user {
     background-color: rgb(250, 123, 64);
 }
-
+.orLogin {
+    color: #4f84a8;
+    text-align: center; 
+}
 /* CSS MEMBERS PAGE */
 #mapid {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
